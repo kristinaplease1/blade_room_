@@ -47,9 +47,7 @@ a{
 header{
     position:relative;
     isolation:isolate;
-
     min-height:620px;
-
     padding:35px 6% 55px;
 
     display:flex;
@@ -101,11 +99,9 @@ header{
 
 .hero-small{
     color:var(--olive);
-
     font-size:12px;
     font-weight:bold;
     letter-spacing:5px;
-
     margin-bottom:25px;
 }
 
@@ -118,9 +114,7 @@ header{
 
 .hero p{
     margin-top:25px;
-
     color:#e0e0d8;
-
     font-size:14px;
     letter-spacing:.4px;
     line-height:1.6;
@@ -135,22 +129,16 @@ header{
     display:flex;
     justify-content:center;
     align-items:center;
-
     gap:12px;
     flex-wrap:wrap;
-
     margin-top:38px;
 }
 
 .top-buttons a{
     display:inline-block;
-
     padding:14px 22px;
-
     border:1px solid var(--olive);
-
     color:var(--text);
-
     text-decoration:none;
 
     font-size:11px;
@@ -173,29 +161,22 @@ header{
 .info{
     display:flex;
     justify-content:center;
-
     gap:60px;
-
     margin-top:30px;
-
     text-align:left;
 }
 
 .info-item span{
     display:block;
-
     color:var(--olive);
-
     font-size:10px;
     font-weight:bold;
     letter-spacing:3px;
-
     margin-bottom:8px;
 }
 
 .info-item p{
     color:#e0e0d8;
-
     font-size:12px;
     line-height:1.6;
 }
@@ -212,8 +193,7 @@ header{
 
     display:flex;
     justify-content:center;
-
-    gap:45px;
+    gap:40px;
 
     padding:19px 20px;
 
@@ -227,13 +207,10 @@ header{
 
 .brand-nav a{
     text-decoration:none;
-
     font-size:11px;
     font-weight:bold;
     letter-spacing:3px;
-
     white-space:nowrap;
-
     transition:.25s;
 }
 
@@ -259,7 +236,6 @@ header{
 
 .brand{
     margin-bottom:90px;
-
     scroll-margin-top:80px;
 }
 
@@ -275,19 +251,16 @@ header{
 .brand-title{
     display:flex;
     align-items:baseline;
-
     gap:15px;
 
     margin-bottom:30px;
 
     border-bottom:1px solid var(--line);
-
     padding-bottom:15px;
 }
 
 .brand-number{
     color:var(--olive);
-
     font-size:13px;
     font-weight:bold;
 }
@@ -304,10 +277,7 @@ header{
 
 .product-grid{
     display:grid;
-
-    grid-template-columns:
-        repeat(3,minmax(0,1fr));
-
+    grid-template-columns:repeat(3,minmax(0,1fr));
     gap:30px 24px;
 }
 
@@ -333,7 +303,6 @@ header{
 
 .product-card:hover{
     transform:translateY(-4px);
-
     border-color:var(--olive);
 }
 
@@ -356,7 +325,6 @@ header{
 .product-image img{
     width:100%;
     height:100%;
-
     object-fit:contain;
 }
 
@@ -381,10 +349,8 @@ header{
 
 .price{
     color:#fff;
-
     font-size:18px;
     font-weight:bold;
-
     margin-bottom:18px;
 }
 
@@ -395,7 +361,6 @@ header{
 
 .order-button{
     display:block;
-
     width:100%;
 
     margin-top:auto;
@@ -403,11 +368,9 @@ header{
     padding:16px 10px;
 
     background:var(--olive);
-
     color:#10120d;
 
     text-align:center;
-
     text-decoration:none;
 
     font-size:11px;
@@ -439,15 +402,12 @@ footer{
 .footer-name{
     font-size:25px;
     font-weight:bold;
-
     letter-spacing:5px;
-
     margin-bottom:15px;
 }
 
 .footer-text{
     color:#888b80;
-
     font-size:11px;
     letter-spacing:2px;
 }
@@ -460,12 +420,12 @@ footer{
 @media(max-width:900px){
 
     .product-grid{
-        grid-template-columns:
-            repeat(2,minmax(0,1fr));
+        grid-template-columns:repeat(2,minmax(0,1fr));
     }
 
     .brand-nav{
         gap:25px;
+        overflow-x:auto;
     }
 
     .info{
@@ -475,7 +435,6 @@ footer{
     .products-section{
         padding:65px 4%;
     }
-
 }
 
 
@@ -487,9 +446,7 @@ footer{
 
     header{
         min-height:auto;
-
         padding:25px 20px 40px;
-
         background-position:center center;
     }
 
@@ -508,49 +465,36 @@ footer{
 
     .hero-small{
         font-size:9px;
-
         letter-spacing:3px;
-
         margin-bottom:20px;
     }
 
     .hero h1{
         font-size:clamp(38px,11vw,55px);
-
         letter-spacing:1px;
     }
 
     .hero p{
         font-size:12px;
-
         margin-top:22px;
     }
 
-
     .top-buttons{
         gap:8px;
-
         margin-top:30px;
     }
 
     .top-buttons a{
         padding:12px 13px;
-
         font-size:9px;
-
         letter-spacing:1px;
     }
 
-
     .info{
         flex-direction:column;
-
         gap:18px;
-
         align-items:center;
-
         text-align:center;
-
         margin-top:30px;
     }
 
@@ -558,14 +502,10 @@ footer{
         text-align:center;
     }
 
-
     .brand-nav{
         justify-content:flex-start;
-
         overflow-x:auto;
-
         gap:25px;
-
         padding:16px 20px;
     }
 
@@ -573,10 +513,8 @@ footer{
         font-size:9px;
     }
 
-
     .products-section{
         padding:50px 16px;
-
         background-attachment:scroll;
     }
 
@@ -590,19 +528,16 @@ footer{
 
     .brand-name{
         font-size:23px;
-
         letter-spacing:3px;
     }
 
     .product-grid{
         grid-template-columns:1fr;
-
         gap:24px;
     }
 
     .product-card{
         min-height:490px;
-
         padding:15px;
     }
 
@@ -612,14 +547,12 @@ footer{
 
     .product-title{
         font-size:14px;
-
         min-height:unset;
     }
 
     .price{
         font-size:17px;
     }
-
 
     footer{
         padding:38px 20px;
@@ -628,7 +561,6 @@ footer{
     .footer-name{
         font-size:20px;
     }
-
 }
 
 
@@ -643,7 +575,6 @@ footer{
     *::after{
         transition:none!important;
     }
-
 }
 
 </style>
@@ -652,6 +583,10 @@ footer{
 
 <body>
 
+
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
 
@@ -759,6 +694,10 @@ footer{
 
 
 
+<!-- =========================
+     BRAND NAVIGATION
+========================= -->
+
 <nav class="brand-nav">
 
     <a href="#proraso">
@@ -810,6 +749,8 @@ footer{
     <div class="product-grid">
 
 
+        <!-- A1 -->
+
         <article class="product-card">
 
             <div class="product-image">
@@ -840,6 +781,8 @@ footer{
 
         </article>
 
+
+        <!-- A2 -->
 
         <article class="product-card">
 
@@ -872,6 +815,8 @@ footer{
         </article>
 
 
+        <!-- A3 -->
+
         <article class="product-card">
 
             <div class="product-image">
@@ -903,6 +848,8 @@ footer{
         </article>
 
 
+        <!-- A4 -->
+
         <article class="product-card">
 
             <div class="product-image">
@@ -933,6 +880,8 @@ footer{
 
         </article>
 
+
+        <!-- A5 -->
 
         <article class="product-card">
 
@@ -992,6 +941,8 @@ footer{
     <div class="product-grid">
 
 
+        <!-- A6 -->
+
         <article class="product-card">
 
             <div class="product-image">
@@ -1022,6 +973,8 @@ footer{
 
         </article>
 
+
+        <!-- A7 -->
 
         <article class="product-card">
 
@@ -1054,6 +1007,8 @@ footer{
         </article>
 
 
+        <!-- A8 -->
+
         <article class="product-card">
 
             <div class="product-image">
@@ -1085,13 +1040,13 @@ footer{
         </article>
 
 
-        <!-- NEW MORGANS -->
+        <!-- A17 -->
 
         <article class="product-card">
 
             <div class="product-image">
                 <img
-                    src="a17.PNG"
+                    src="a17.png"
                     alt="Morgan's Sea Salt Spray"
                     loading="lazy"
                 >
@@ -1145,6 +1100,8 @@ footer{
     <div class="product-grid">
 
 
+        <!-- A9 -->
+
         <article class="product-card">
 
             <div class="product-image">
@@ -1175,6 +1132,8 @@ footer{
 
         </article>
 
+
+        <!-- A10 -->
 
         <article class="product-card">
 
@@ -1207,6 +1166,8 @@ footer{
         </article>
 
 
+        <!-- A11 -->
+
         <article class="product-card">
 
             <div class="product-image">
@@ -1238,13 +1199,13 @@ footer{
         </article>
 
 
-        <!-- NEW NISHMAN M3 -->
+        <!-- A15 -->
 
         <article class="product-card">
 
             <div class="product-image">
                 <img
-                    src="a15.PNG"
+                    src="a15.png"
                     alt="Nishman M3 Matte Paste Texturizing Mess Up"
                     loading="lazy"
                 >
@@ -1271,13 +1232,13 @@ footer{
         </article>
 
 
-        <!-- NEW NISHMAN M1 -->
+        <!-- A16 -->
 
         <article class="product-card">
 
             <div class="product-image">
                 <img
-                    src="a16.PNG"
+                    src="a16.png"
                     alt="Nishman M1 Matte Paste Argan"
                     loading="lazy"
                 >
@@ -1331,13 +1292,13 @@ footer{
     <div class="product-grid">
 
 
-        <!-- XFLEX ORIGINAL -->
+        <!-- A13 -->
 
         <article class="product-card">
 
             <div class="product-image">
                 <img
-                    src="a13.PNG"
+                    src="a13.png"
                     alt="Xflex Aftershave Original Spray"
                     loading="lazy"
                 >
@@ -1364,13 +1325,13 @@ footer{
         </article>
 
 
-        <!-- XFLEX GREEN SPLASH -->
+        <!-- A14 -->
 
         <article class="product-card">
 
             <div class="product-image">
                 <img
-                    src="a14.PNG"
+                    src="a14.png"
                     alt="Xflex Aftershave Green Splash"
                     loading="lazy"
                 >
@@ -1424,6 +1385,8 @@ footer{
     <div class="product-grid">
 
 
+        <!-- A12 -->
+
         <article class="product-card">
 
             <div class="product-image">
@@ -1463,6 +1426,10 @@ footer{
 
 
 
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
 
     <div class="footer-name">
@@ -1476,6 +1443,10 @@ footer{
 </footer>
 
 
+
+<!-- =========================
+     TELEGRAM
+========================= -->
 
 <script>
 
