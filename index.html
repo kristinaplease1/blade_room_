@@ -1,0 +1,1503 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#10120d">
+
+<title>BLADE ROOM — PROFESSIONAL COSMETICS</title>
+
+<style>
+
+:root{
+    --bg:#10120d;
+    --panel:#20241a;
+    --text:#eeeeea;
+    --muted:#b8b9ae;
+    --olive:#aab681;
+    --line:#343925;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+    scroll-padding-top:70px;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+a{
+    color:inherit;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    position:relative;
+    isolation:isolate;
+
+    min-height:620px;
+
+    padding:35px 6% 55px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+
+    background:
+        linear-gradient(
+            rgba(10,12,8,.62),
+            rgba(10,12,8,.80)
+        ),
+        url("barbershop.jpg") center 48%/cover no-repeat;
+}
+
+.header-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+
+.header-name{
+    font-size:18px;
+    font-weight:bold;
+    letter-spacing:4px;
+}
+
+.header-instagram{
+    font-size:11px;
+    letter-spacing:2px;
+    text-decoration:none;
+}
+
+.header-instagram:hover{
+    color:var(--olive);
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    text-align:center;
+    margin-top:20px;
+    position:relative;
+    z-index:1;
+}
+
+.hero-small{
+    color:var(--olive);
+
+    font-size:12px;
+    font-weight:bold;
+    letter-spacing:5px;
+
+    margin-bottom:25px;
+}
+
+.hero h1{
+    font-size:clamp(48px,10vw,130px);
+    line-height:.95;
+    letter-spacing:3px;
+    font-weight:900;
+}
+
+.hero p{
+    margin-top:25px;
+
+    color:#e0e0d8;
+
+    font-size:14px;
+    letter-spacing:.4px;
+    line-height:1.6;
+}
+
+
+/* =========================
+   TOP BUTTONS
+========================= */
+
+.top-buttons{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    gap:12px;
+    flex-wrap:wrap;
+
+    margin-top:38px;
+}
+
+.top-buttons a{
+    display:inline-block;
+
+    padding:14px 22px;
+
+    border:1px solid var(--olive);
+
+    color:var(--text);
+
+    text-decoration:none;
+
+    font-size:11px;
+    font-weight:bold;
+    letter-spacing:1.5px;
+
+    transition:.25s;
+}
+
+.top-buttons a:hover{
+    background:var(--olive);
+    color:#10120d;
+}
+
+
+/* =========================
+   INFO
+========================= */
+
+.info{
+    display:flex;
+    justify-content:center;
+
+    gap:60px;
+
+    margin-top:30px;
+
+    text-align:left;
+}
+
+.info-item span{
+    display:block;
+
+    color:var(--olive);
+
+    font-size:10px;
+    font-weight:bold;
+    letter-spacing:3px;
+
+    margin-bottom:8px;
+}
+
+.info-item p{
+    color:#e0e0d8;
+
+    font-size:12px;
+    line-height:1.6;
+}
+
+
+/* =========================
+   BRAND NAVIGATION
+========================= */
+
+.brand-nav{
+    position:sticky;
+    top:0;
+    z-index:20;
+
+    display:flex;
+    justify-content:center;
+
+    gap:45px;
+
+    padding:19px 20px;
+
+    background:rgba(18,20,14,.97);
+
+    border-top:1px solid #303428;
+    border-bottom:1px solid #303428;
+
+    backdrop-filter:blur(10px);
+}
+
+.brand-nav a{
+    text-decoration:none;
+
+    font-size:11px;
+    font-weight:bold;
+    letter-spacing:3px;
+
+    white-space:nowrap;
+
+    transition:.25s;
+}
+
+.brand-nav a:hover{
+    color:var(--olive);
+}
+
+
+/* =========================
+   PRODUCTS
+========================= */
+
+.products-section{
+    background:
+        linear-gradient(
+            rgba(16,18,13,.94),
+            rgba(16,18,13,.97)
+        ),
+        url("barbershop.jpg") center center/cover fixed;
+
+    padding:80px 6%;
+}
+
+.brand{
+    margin-bottom:90px;
+
+    scroll-margin-top:80px;
+}
+
+.brand:last-child{
+    margin-bottom:10px;
+}
+
+
+/* =========================
+   BRAND TITLE
+========================= */
+
+.brand-title{
+    display:flex;
+    align-items:baseline;
+
+    gap:15px;
+
+    margin-bottom:30px;
+
+    border-bottom:1px solid var(--line);
+
+    padding-bottom:15px;
+}
+
+.brand-number{
+    color:var(--olive);
+
+    font-size:13px;
+    font-weight:bold;
+}
+
+.brand-name{
+    font-size:30px;
+    letter-spacing:4px;
+}
+
+
+/* =========================
+   PRODUCT GRID
+========================= */
+
+.product-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,minmax(0,1fr));
+
+    gap:30px 24px;
+}
+
+
+/* =========================
+   PRODUCT CARD
+========================= */
+
+.product-card{
+    background:rgba(28,32,23,.96);
+
+    border:1px solid #343a2a;
+
+    padding:18px;
+
+    display:flex;
+    flex-direction:column;
+
+    min-height:520px;
+
+    transition:.25s;
+}
+
+.product-card:hover{
+    transform:translateY(-4px);
+
+    border-color:var(--olive);
+}
+
+
+/* =========================
+   PRODUCT IMAGE
+========================= */
+
+.product-image{
+    width:100%;
+    height:320px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    margin-bottom:20px;
+}
+
+.product-image img{
+    width:100%;
+    height:100%;
+
+    object-fit:contain;
+}
+
+
+/* =========================
+   PRODUCT TITLE
+========================= */
+
+.product-title{
+    font-size:14px;
+    line-height:1.55;
+
+    min-height:65px;
+
+    margin-bottom:14px;
+}
+
+
+/* =========================
+   PRICE
+========================= */
+
+.price{
+    color:#fff;
+
+    font-size:18px;
+    font-weight:bold;
+
+    margin-bottom:18px;
+}
+
+
+/* =========================
+   ORDER BUTTON
+========================= */
+
+.order-button{
+    display:block;
+
+    width:100%;
+
+    margin-top:auto;
+
+    padding:16px 10px;
+
+    background:var(--olive);
+
+    color:#10120d;
+
+    text-align:center;
+
+    text-decoration:none;
+
+    font-size:11px;
+    font-weight:bold;
+    letter-spacing:2px;
+
+    transition:.25s;
+}
+
+.order-button:hover{
+    background:var(--text);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#10120d;
+
+    border-top:1px solid #303428;
+
+    padding:45px 6%;
+
+    text-align:center;
+}
+
+.footer-name{
+    font-size:25px;
+    font-weight:bold;
+
+    letter-spacing:5px;
+
+    margin-bottom:15px;
+}
+
+.footer-text{
+    color:#888b80;
+
+    font-size:11px;
+    letter-spacing:2px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:900px){
+
+    .product-grid{
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+    }
+
+    .brand-nav{
+        gap:25px;
+    }
+
+    .info{
+        gap:35px;
+    }
+
+    .products-section{
+        padding:65px 4%;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:600px){
+
+    header{
+        min-height:auto;
+
+        padding:25px 20px 40px;
+
+        background-position:center center;
+    }
+
+    .header-name{
+        font-size:13px;
+        letter-spacing:2.5px;
+    }
+
+    .header-instagram{
+        font-size:9px;
+    }
+
+    .hero{
+        margin-top:75px;
+    }
+
+    .hero-small{
+        font-size:9px;
+
+        letter-spacing:3px;
+
+        margin-bottom:20px;
+    }
+
+    .hero h1{
+        font-size:clamp(38px,11vw,55px);
+
+        letter-spacing:1px;
+    }
+
+    .hero p{
+        font-size:12px;
+
+        margin-top:22px;
+    }
+
+
+    .top-buttons{
+        gap:8px;
+
+        margin-top:30px;
+    }
+
+    .top-buttons a{
+        padding:12px 13px;
+
+        font-size:9px;
+
+        letter-spacing:1px;
+    }
+
+
+    .info{
+        flex-direction:column;
+
+        gap:18px;
+
+        align-items:center;
+
+        text-align:center;
+
+        margin-top:30px;
+    }
+
+    .info-item p{
+        text-align:center;
+    }
+
+
+    .brand-nav{
+        justify-content:flex-start;
+
+        overflow-x:auto;
+
+        gap:25px;
+
+        padding:16px 20px;
+    }
+
+    .brand-nav a{
+        font-size:9px;
+    }
+
+
+    .products-section{
+        padding:50px 16px;
+
+        background-attachment:scroll;
+    }
+
+    .brand{
+        margin-bottom:65px;
+    }
+
+    .brand-title{
+        margin-bottom:22px;
+    }
+
+    .brand-name{
+        font-size:23px;
+
+        letter-spacing:3px;
+    }
+
+    .product-grid{
+        grid-template-columns:1fr;
+
+        gap:24px;
+    }
+
+    .product-card{
+        min-height:490px;
+
+        padding:15px;
+    }
+
+    .product-image{
+        height:300px;
+    }
+
+    .product-title{
+        font-size:14px;
+
+        min-height:unset;
+    }
+
+    .price{
+        font-size:17px;
+    }
+
+
+    footer{
+        padding:38px 20px;
+    }
+
+    .footer-name{
+        font-size:20px;
+    }
+
+}
+
+
+@media(prefers-reduced-motion:reduce){
+
+    html{
+        scroll-behavior:auto;
+    }
+
+    *,
+    *::before,
+    *::after{
+        transition:none!important;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<header>
+
+    <div class="header-top">
+
+        <div class="header-name">
+            BLADE ROOM
+        </div>
+
+        <a
+            class="header-instagram"
+            href="https://www.instagram.com/barbershop_blade_room_/"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            INSTAGRAM ↗
+        </a>
+
+    </div>
+
+
+    <div class="hero">
+
+        <div class="hero-small">
+            PROFESSIONAL COSMETICS
+        </div>
+
+        <h1>
+            BLADE ROOM
+        </h1>
+
+        <p>
+            Професійна косметика для догляду за бородою та шкірою.
+        </p>
+
+
+        <div class="top-buttons">
+
+            <a
+                href="https://www.google.com/maps/search/?api=1&query=Blade%20Room%20barbershop%2C%20%D0%9A%D0%B0%D0%BB%D0%B8%D0%BD%D0%BE%D0%B2%D0%B0%2053%D0%93%2C%20%D0%94%D0%BD%D1%96%D0%BF%D1%80%D0%BE"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                GOOGLE MAPS
+            </a>
+
+            <a href="tel:+380508008123">
+                +380 50 800 8 123
+            </a>
+
+            <a
+                href="https://www.instagram.com/barbershop_blade_room_/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                INSTAGRAM
+            </a>
+
+            <a
+                href="https://t.me/blade_room"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                TELEGRAM
+            </a>
+
+        </div>
+
+
+        <div class="info">
+
+            <div class="info-item">
+
+                <span>
+                    LOCATION
+                </span>
+
+                <p>
+                    м. Дніпро<br>
+                    вул. Калинова, 53Г<br>
+                    2 поверх
+                </p>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <span>
+                    WORKING HOURS
+                </span>
+
+                <p>
+                    Пн–Нд<br>
+                    10:00–20:00
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<nav class="brand-nav">
+
+    <a href="#proraso">
+        PRORASO
+    </a>
+
+    <a href="#morgans">
+        MORGANS
+    </a>
+
+    <a href="#nishman">
+        NISHMAN
+    </a>
+
+    <a href="#xflex">
+        XFLEX
+    </a>
+
+    <a href="#luxina">
+        LUXINA
+    </a>
+
+</nav>
+
+
+
+<main class="products-section">
+
+
+<!-- =========================
+     PRORASO
+========================= -->
+
+<section class="brand" id="proraso">
+
+    <div class="brand-title">
+
+        <span class="brand-number">
+            01
+        </span>
+
+        <h2 class="brand-name">
+            PRORASO
+        </h2>
+
+    </div>
+
+
+    <div class="product-grid">
+
+
+        <article class="product-card">
+
+            <div class="product-image">
+                <img
+                    src="a1.PNG"
+                    alt="Proraso живильний крем для гоління"
+                    loading="lazy"
+                >
+            </div>
+
+            <div class="product-title">
+                Proraso живильний крем для гоління для помʼякшення жорсткої щетини з сандаловою олією та олією дерева Ши
+            </div>
+
+            <div class="price">
+                300 грн
+            </div>
+
+            <a
+                class="order-button"
+                href="https://t.me/blade_room"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-product="Proraso живильний крем для гоління"
+            >
+                ЗАМОВИТИ
+            </a>
+
+        </article>
+
+
+        <article class="product-card">
+
+            <div class="product-image">
+                <img
+                    src="a2.PNG"
+                    alt="Proraso мило для гоління"
+                    loading="lazy"
+                >
+            </div>
+
+            <div class="product-title">
+                Proraso мило для гоління з екстрактом зеленого чаю та вівса для чутливої шкіри
+            </div>
+
+            <div class="price">
+                200 грн
+            </div>
+
+            <a
+                class="order-button"
+                href="https://t.me/blade_room"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-product="Proraso мило для гоління"
+            >
+                ЗАМОВИТИ
+            </a>
+
+        </article>
+
+
+        <article class="product-card">
+
+            <div class="product-image">
+                <img
+                    src="a3.PNG"
+                    alt="Proraso крем для чутливої шкіри"
+                    loading="lazy"
+                >
+            </div>
+
+            <div class="product-title">
+                Proraso крем для чутливої шкіри перед голінням з екстрактом зеленого чаю та вівса
+            </div>
+
+            <div class="price">
+                350 грн
+            </div>
+
+            <a
+                class="order-button"
+                href="https://t.me/blade_room"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-product="Proraso крем для чутливої шкіри перед голінням"
+            >
+                ЗАМОВИТИ
+            </a>
+
+        </article>
+
+
+        <article class="product-card">
+
+            <div class="product-image">
+                <img
+                    src="a4.PNG"
+                    alt="Proraso шампунь для бороди Cypress & Vetyver"
+                    loading="lazy"
+                >
+            </div>
+
+            <div class="product-title">
+                Proraso шампунь для бороди Cypress &amp; Vetyver
+            </div>
+
+            <div class="price">
+                650 грн
+            </div>
+
+            <a
+                class="order-button"
+                href="https://t.me/blade_room"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-product="Proraso шампунь для бороди Cypress & Vetyver"
+            >
+                ЗАМОВИТИ
+            </a>
+
+        </article>
+
+
+        <article class="product-card">
+
+            <div class="product-image">
+                <img
+                    src="a5.PNG"
+                    alt="Proraso олія для догляду за бородою"
+                    loading="lazy"
+                >
+            </div>
+
+            <div class="product-title">
+                Proraso олія для догляду за бородою
+            </div>
+
+            <div class="price">
+                650 грн
+            </div>
+
+            <a
+                class="order-button"
+                href="https://t.me/blade_room"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-product="Proraso олія для догляду за бородою"
+            >
+                ЗАМОВИТИ
+            </a>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     MORGANS
+========================= -->
+
+<section class="brand" id="morgans">
+
+    <div class="brand-title">
+
+        <span class="brand-number">
+            02
+        </span>
+
+        <h2 class="brand-name">
+            MORGANS
+        </h2>
+
+    </div>
+
+
+    <div class="product-grid">
+
+
+        <article class="product-card">
+
+            <div class="product-image">
+                <img
+                    src="a6.PNG"
+                    alt="Morgans шампунь 250 мл"
+                    loading="lazy"
+                >
+            </div>
+
+            <div class="product-title">
+                Morgans шампунь 250 мл
+            </div>
+
+            <div class="price">
+                500 грн
+            </div>
+
+            <a
+                class="order-button"
+                href="https://t.me/blade_room"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-product="Morgans шампунь 250 мл"
+            >
+                ЗАМОВИТИ
+            </a>
+
+        </article>
+
+
+        <article class="product-card">
+
+            <div class="product-image">
+                <img
+                    src="a7.PNG"
+                    alt="Morgans паста 50 мл"
+                    loading="lazy"
+                >
+            </div>
+
+            <div class="product-title">
+                Morgans паста 50 мл
+            </div>
+
+            <div class="price">
+                500 грн
+            </div>
+
+            <a
+                class="order-button"
+                href="https://t.me/blade_room"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-product="Morgans паста 50 мл"
+            >
+                ЗАМОВИТИ
+            </a>
+
+        </article>
+
+
+        <article class="product-card">
+
+            <div class="product-image">
+                <img
+                    src="a8.PNG"
+                    alt="Morgans паста 120 мл"
+                    loading="lazy"
+                >
+            </div>
+
+            <div class="product-title">
+                Morgans паста 120 мл
+            </div>
+
+            <div class="price">
+                700 грн
+            </div>
+
+            <a
+                class="order-button"
+                href="https://t.me/blade_room"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-product="Morgans паста 120 мл"
+            >
+                ЗАМОВИТИ
+            </a>
+
+        </article>
+
+
+        <!-- NEW MORGANS -->
+
+        <article class="product-card">
+
+            <div class="product-image">
+                <img
+                    src="a17.PNG"
+                    alt="Morgan's Sea Salt Spray"
+                    loading="lazy"
+                >
+            </div>
+
+            <div class="product-title">
+                Сольовий спрей для вкладання Morgan's Sea Salt Spray
+            </div>
+
+            <div class="price">
+                600 грн
+            </div>
+
+            <a
+                class="order-button"
+                href="https://t.me/blade_room"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-product="Morgan's Sea Salt Spray"
+            >
+                ЗАМОВИТИ
+            </a>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     NISHMAN
+========================= -->
+
+<section class="brand" id="nishman">
+
+    <div class="brand-title">
+
+        <span class="brand-number">
+            03
+        </span>
+
+        <h2 class="brand-name">
+            NISHMAN
+        </h2>
+
+    </div>
+
+
+    <div class="product-grid">
+
+
+        <article class="product-card">
+
+            <div class="product-image">
+                <img
+                    src="a9.PNG"
+                    alt="Nishman двофазник 400 мл"
+                    loading="lazy"
+                >
+            </div>
+
+            <div class="product-title">
+                Nishman двофазник 400 мл
+            </div>
+
+            <div class="price">
+                900 грн
+            </div>
+
+            <a
+                class="order-button"
+                href="https://t.me/blade_room"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-product="Nishman двофазник 400 мл"
+            >
+                ЗАМОВИТИ
+            </a>
+
+        </article>
+
+
+        <article class="product-card">
+
+            <div class="product-image">
+                <img
+                    src="a10.PNG"
+                    alt="Nishman After Shave Cologne 400 мл"
+                    loading="lazy"
+                >
+            </div>
+
+            <div class="product-title">
+                Nishman After Shave Cologne 400 мл
+            </div>
+
+            <div class="price">
+                900 грн
+            </div>
+
+            <a
+                class="order-button"
+                href="https://t.me/blade_room"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-product="Nishman After Shave Cologne 400 мл"
+            >
+                ЗАМОВИТИ
+            </a>
+
+        </article>
+
+
+        <article class="product-card">
+
+            <div class="product-image">
+                <img
+                    src="a11.PNG"
+                    alt="Nishman паста M2 100 мл"
+                    loading="lazy"
+                >
+            </div>
+
+            <div class="product-title">
+                Nishman паста M2 100 мл
+            </div>
+
+            <div class="price">
+                500 грн
+            </div>
+
+            <a
+                class="order-button"
+                href="https://t.me/blade_room"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-product="Nishman паста M2 100 мл"
+            >
+                ЗАМОВИТИ
+            </a>
+
+        </article>
+
+
+        <!-- NEW NISHMAN M3 -->
+
+        <article class="product-card">
+
+            <div class="product-image">
+                <img
+                    src="a15.PNG"
+                    alt="Nishman M3 Matte Paste Texturizing Mess Up"
+                    loading="lazy"
+                >
+            </div>
+
+            <div class="product-title">
+                Матова текстуруюча паста для стилізації волосся Nishman M3 Matte Paste Texturizing Mess Up
+            </div>
+
+            <div class="price">
+                500 грн
+            </div>
+
+            <a
+                class="order-button"
+                href="https://t.me/blade_room"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-product="Nishman M3 Matte Paste Texturizing Mess Up"
+            >
+                ЗАМОВИТИ
+            </a>
+
+        </article>
+
+
+        <!-- NEW NISHMAN M1 -->
+
+        <article class="product-card">
+
+            <div class="product-image">
+                <img
+                    src="a16.PNG"
+                    alt="Nishman M1 Matte Paste Argan"
+                    loading="lazy"
+                >
+            </div>
+
+            <div class="product-title">
+                Матова паста для стилізації волосся Nishman M1 Matte Paste Argan
+            </div>
+
+            <div class="price">
+                500 грн
+            </div>
+
+            <a
+                class="order-button"
+                href="https://t.me/blade_room"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-product="Nishman M1 Matte Paste Argan"
+            >
+                ЗАМОВИТИ
+            </a>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     XFLEX
+========================= -->
+
+<section class="brand" id="xflex">
+
+    <div class="brand-title">
+
+        <span class="brand-number">
+            04
+        </span>
+
+        <h2 class="brand-name">
+            XFLEX
+        </h2>
+
+    </div>
+
+
+    <div class="product-grid">
+
+
+        <!-- XFLEX ORIGINAL -->
+
+        <article class="product-card">
+
+            <div class="product-image">
+                <img
+                    src="a13.PNG"
+                    alt="Xflex Aftershave Original Spray"
+                    loading="lazy"
+                >
+            </div>
+
+            <div class="product-title">
+                Лосьйон після гоління для чутливої шкіри Xflex Aftershave Original Spray
+            </div>
+
+            <div class="price">
+                650 грн
+            </div>
+
+            <a
+                class="order-button"
+                href="https://t.me/blade_room"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-product="Xflex Aftershave Original Spray"
+            >
+                ЗАМОВИТИ
+            </a>
+
+        </article>
+
+
+        <!-- XFLEX GREEN SPLASH -->
+
+        <article class="product-card">
+
+            <div class="product-image">
+                <img
+                    src="a14.PNG"
+                    alt="Xflex Aftershave Green Splash"
+                    loading="lazy"
+                >
+            </div>
+
+            <div class="product-title">
+                Лосьйон після гоління для чутливої шкіри Xflex Aftershave Green Splash
+            </div>
+
+            <div class="price">
+                650 грн
+            </div>
+
+            <a
+                class="order-button"
+                href="https://t.me/blade_room"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-product="Xflex Aftershave Green Splash"
+            >
+                ЗАМОВИТИ
+            </a>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     LUXINA
+========================= -->
+
+<section class="brand" id="luxina">
+
+    <div class="brand-title">
+
+        <span class="brand-number">
+            05
+        </span>
+
+        <h2 class="brand-name">
+            LUXINA
+        </h2>
+
+    </div>
+
+
+    <div class="product-grid">
+
+
+        <article class="product-card">
+
+            <div class="product-image">
+                <img
+                    src="a12.PNG"
+                    alt="Luxina крем перед та після гоління 100 мл"
+                    loading="lazy"
+                >
+            </div>
+
+            <div class="product-title">
+                Luxina крем перед та після гоління 100 мл
+            </div>
+
+            <div class="price">
+                700 грн
+            </div>
+
+            <a
+                class="order-button"
+                href="https://t.me/blade_room"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-product="Luxina крем перед та після гоління 100 мл"
+            >
+                ЗАМОВИТИ
+            </a>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<footer>
+
+    <div class="footer-name">
+        BLADE ROOM
+    </div>
+
+    <div class="footer-text">
+        PROFESSIONAL COSMETICS
+    </div>
+
+</footer>
+
+
+
+<script>
+
+document
+    .querySelectorAll('.order-button[data-product]')
+    .forEach(function(button){
+
+        var product =
+            button.getAttribute('data-product');
+
+        button.href =
+            'https://t.me/blade_room?text=' +
+            encodeURIComponent(
+                'Доброго дня! Хочу замовити: ' +
+                product +
+                '.'
+            );
+
+    });
+
+</script>
+
+
+</body>
+</html>
